@@ -3,11 +3,12 @@
 	{
 		public static void main(String [] args)
 			{
+				Scanner input = new Scanner(System.in);
 				double num1,num2;
 				char arithmeticOperation, isCont;
 				isCont = 'y'; //calc starts auto
 				while (isCont == 'y') { 
-				Scanner input = new Scanner(System.in); 
+				 
 				System.out.print("enter number:");
 				num1 = input.nextDouble(); //input for the first number
 				System.out.print("enter Arithmetic operation:");
@@ -43,5 +44,6 @@
 				System.out.print("continue: (y/n) "); //incase you want to stop
 				isCont = input.next().charAt(0);
 				}
+				input.close();
 			}
 	}
