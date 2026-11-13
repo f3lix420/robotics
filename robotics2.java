@@ -84,24 +84,26 @@ import java.lang.Math;
 			}
 			return sum/numbers.length;
 		}
-		static String palindrome(String snumbers)
+		/**
+		 * function to check palindrome using stringbuffer
+		 * @param snumbers boolean
+		 * @return boolean
+		 */ 
+		static boolean palindrome(String snumbers)
 		{
-			String palindrome;
 			StringBuffer srebmuns = new StringBuffer(snumbers);
 			srebmuns.reverse();
 			String srebmunsrg = srebmuns.toString();
-			if (snumbers.equals(srebmunsrg))
-			{
-				return palindrome = "true";
-			}
-			else {
+			return snumbers.equals(srebmunsrg);
 
-				return palindrome = "false";
-			}
 		}
-		static String palindrome2(String snumbers)
+				/**
+		 * function to check palindrome using loop
+		 * @param snumbers boolean
+		 * @return boolean
+		 */ 
+		static boolean palindrome2(String snumbers)
 		{
-			String Palindrome;
 			String reverseNum = " ";
 			for (int i = 0; i<snumbers.length(); i++)
 			{
