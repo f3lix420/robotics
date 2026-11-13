@@ -1,16 +1,13 @@
 	import java.util.Scanner;
-
-import javax.lang.model.util.ElementScanner14;
-
-import java.lang.Math;
-	import java.io.*;
+  	import java.lang.Math;
+	import java.lang.StringBuffer;
 	public class robotics2
 	{
-		public static void main(String [] args)
+				public static void main(String [] args)
 		{
 			Scanner input = new Scanner(System.in);
 
-			double r = getDoubleFromInput();
+			double r = getDoubleFromInput(input);
 			System.out.println("circle area is equal to= " +getCircleArea(r));
 			System.out.println();
 
@@ -26,10 +23,12 @@ import java.lang.Math;
 			System.out.println();
 
 			String snumbers;
+			input.nextLine();
 			System.out.println("enter number:");
-			snumbers = input.nextLine();
+    		snumbers = input.nextLine();
 			System.out.println(palindrome(snumbers));
-
+			System.out.println();
+            input.close();	
 
 		   
 		}
@@ -45,9 +44,8 @@ import java.lang.Math;
 		 * function to get input of a double 
 		 * @return radius of a circle
 		 */
-		static double getDoubleFromInput()
+		static double getDoubleFromInput(Scanner input)
 		{
-			Scanner input = new Scanner(System.in);
 			System.out.print("enter circle radius: ");
 			double r = input.nextDouble();
 			return r;
@@ -109,13 +107,7 @@ import java.lang.Math;
 			{
 			reverseNum = snumbers.charAt(i) + reverseNum;
 			}
-			if (reverseNum.equals(snumbers))
-			{
-			return Palindrome = "true";
-			}
-			else 
-			{
-			return Palindrome = "false";
-			}
+			return reverseNum.equals(snumbers);
+
 		}
 	}
